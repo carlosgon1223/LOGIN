@@ -1,0 +1,27 @@
+{
+  "name": "login-proyecto",
+  "version": "1.0.0",
+  "description": "login proyecto innovacion abierta",
+  "main": "Login.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosgon1223/LOGIN.git"
+  },
+  "keywords": [
+    "login",
+    "innovacion"
+  ],
+  "author": "Carlos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosgon1223/LOGIN/issues"
+  },
+  "homepage": "https://github.com/carlosgon1223/LOGIN#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.7.1"
+  }
+}
