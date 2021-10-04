@@ -4,20 +4,30 @@ const router = express.Router()
 const controller = require('../controllers/usuarios.controller')
 
 // Crear usuario
-router.post('/usuarios', (req, res)=>{
-    let usuario = req.body
+router.post('/usuarios', async (req, res)=>{
 
-    let info = controller.crearUsuario()
+    try {
+        let usuario = req.body
+        let info = await controller.crearUsuario(usuario)
     return res.send(info)
+        
+    } catch (error) {
+        return res.send(error)
+        
+    }
+    
 })
 // Modificar usuario
 router.put('/usuarios', (req, res)=>{
-    let info = controller.modificarUsuario()
+    let usuario = req.body
+    let info = controller.modificarUsuario(usuario)
     return res.send(info)
 })
 //Eliminar usuario
-router.delete('/usuarios', (req, res)=>{
-    let info = controller.eliminarUsuario()
+router.delete('/usuarios/:id', (req, res)=>{
+    let id = req.params.id
+
+    let info = controller.eliminarUsuario(id)
     return res.send(info)
 })
 // Consultar usuario
